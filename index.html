@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Calculator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <link rel="stylesheet" href="./style.css"/>
+   
+</head>
+<body>
+   
+    <div class="container">
+        <form id="form">
+            <div class="form-group">
+                <label for="income">Enter gross annual income <i class="fa-regular fa-circle-question"></i></label>
+              <div class="helper" hidden >Gross annual income is your total salary before any deductions</div>
+                <input id="income" placeholder="Enter gross annual income" required/>
+                <div class="error-icon" hidden>!</div>
+                <div id="tooltip" hidden>Enter numbers only</div>
+            </div>
+    
+            <div class="form-group">
+                <label for="extra-income">Enter extra income from other <i class="fa-regular fa-circle-question"></i></label>
+                <div class="helper" hidden>Extra-income is your total income from other resources</div>
+                <input id="extra-income"  placeholder="Enter extra income" required />
+                <div class="error-icon" hidden>!</div>
+                <div id="tooltip" hidden>Enter numbers only</div>
+            </div>
+    
+            <div class="form-group">
+                <label for="age">Enter age group from you belong <i class="fa-regular fa-circle-question"></i></label>
+                <div class="helper" hidden>Different age group have different tax</div>
+                <br/>
+                <select id="age" required>
+                    <option value="" disabled selected></option>
+                    <option value="under40">less than 40</option>
+                    <option value="40to60">40-60</option>
+                    <option value="60plus">60 and above</option>
+                </select>
+            </div>
+    
+            <div class="form-group">
+                <label for="deductions-income">Enter total applicable deductions <i class="fa-regular fa-circle-question"></i></label>
+                <div class="helper" hidden>Enter applicable deductions from your salary</div>
+                <input id="deductions-income" placeholder="Enter total applicable deductions"  required/>
+                <div class="error-icon" hidden>!</div>
+                <div id="tooltip" hidden>Enter numbers only</div>
+            </div>
+    
+            <button type="submit">Submit</button>
+        </form>
+        
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>
